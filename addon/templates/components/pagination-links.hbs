@@ -1,29 +1,29 @@
-{{#if showFirstAndLast}}
-  <a class="pagination-links-first {{if firstDisabled 'disabled'}}" {{action "goToPage" 1}}>{{firstPageIcon}}</a>
+{{#if this.showFirstAndLast}}
+  <a class="pagination-links-first {{if this.firstDisabled 'disabled'}}" {{action "goToPage" 1}}>{{this.firstPageIcon}}</a>
 {{/if}}
 
-<a class="pagination-links-prev {{if prevDisabled 'disabled'}}" {{action "goToPrevPage"}}>{{prevPageIcon}}</a>
+<a class="pagination-links-prev {{if this.prevDisabled 'disabled'}}" {{action "goToPrevPage"}}>{{this.prevPageIcon}}</a>
 
-{{#if showFirstEllipsis}}
-  <span class="pagination-links-ellipsis">{{ellipsisIcon}}</span>
+{{#if this.showFirstEllipsis}}
+  <span class="pagination-links-ellipsis">{{this.ellipsisIcon}}</span>
 {{/if}}
 
-{{#each pagesBeforeCurrent as |page|}}
+{{#each this.pagesBeforeCurrent as |page|}}
   <a class="pagination-links-page" {{action "goToPage" page}}>{{page}}</a>
 {{/each}}
 
-<a class="pagination-links-current">{{currentPage}}</a>
+<a class="pagination-links-current">{{this.currentPage}}</a>
 
-{{#each pagesAfterCurrent as |page|}}
+{{#each this.pagesAfterCurrent as |page|}}
   <a class="pagination-links-page" {{action "goToPage" page}}>{{page}}</a>
 {{/each}}
 
-{{#if showLastEllipsis}}
-  <span class="pagination-links-ellipsis">{{ellipsisIcon}}</span>
+{{#if this.showLastEllipsis}}
+  <span class="pagination-links-ellipsis">{{this.ellipsisIcon}}</span>
 {{/if}}
 
-<a class="pagination-links-next {{if nextDisabled 'disabled'}}" {{action "goToNextPage"}}>{{nextPageIcon}}</a>
+<a class="pagination-links-next {{if this.nextDisabled 'disabled'}}" {{action "goToNextPage"}}>{{this.nextPageIcon}}</a>
 
-{{#if showFirstAndLast}}
-  <a class="pagination-links-last {{if lastDisabled 'disabled'}}" {{action "goToPage" lastPage}}>{{lastPageIcon}}</a>
+{{#if this.showFirstAndLast}}
+  <a class="pagination-links-last {{if this.lastDisabled 'disabled'}}" {{action "goToPage" this.lastPage}}>{{this.lastPageIcon}}</a>
 {{/if}}
